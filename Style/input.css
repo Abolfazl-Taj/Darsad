@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base{
+    body{
+        @apply bg-[#212121] flex justify-center items-center flex-col
+    }
+}
+.form{
+    z-index: 5;
+    filter: saturate(0%);
+    border: 1px solid #9991;
+    box-shadow: 1px 1px 500000px 100px #9991;
+ @apply flex mt-[4rem] w-[600px]  bg-[#9991] p-[2rem]  flex-wrap	flex-col items-center rounded
+}
+.form h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 0px 4px gray;
+    @apply text-[35px] text-[#666] mb-[2rem] font-bold
+}
+.input{
+    direction: rtl;
+    transition:  all 0.75s;
+    filter: blur(5px);
+ @apply  mx-[0.25rem] p-[0.25rem] w-[400px] h-[2.25rem] my-[0.5rem] rounded-sm text-[#212121] text-[15px] bg-[#666]
+}
+.send{
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    @apply  mx-[0.25rem] p-[0.5rem] my-[1rem] mt-[2rem] rounded-sm bg-[#212121] text-[#666] text-[22px]
+
+}
+.adad{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transform:translateY(-100px);
+    filter: opacity(0);
+    transition: all 0.5s;
+    @apply p-5 text-center bg-[#666] text-[#212121] font-extrabold text-[20px] mt-[2.25rem] w-[300px];
+}
+.transition{
+    transform: rotateY(360deg) scale(1.1);
+    filter: blur(0);
+}
+.tran{
+    filter: opacity(0.5);
+    transform: rotateY(360deg) translateY(20px) ;
+}
