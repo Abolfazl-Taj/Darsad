@@ -8,23 +8,25 @@ form.addEventListener("click", (e) => {
   let input = e.target;
   input.classList.toggle("transition");
 });
-send.addEventListener("mouseover", () => {
+send.addEventListener("click", (e) => {
   if (
     kol.value.length == 0 ||
     dorost.value.length == 0 ||
     ghalat.value.length == 0
   ) {
     window.alert("مقدار  های ورودی  پر نشده  است.");
+    e.preventDefault();
   } else if (
     Number(dorost.value) + Number(ghalat.value) >
     Number(kol.value)
   ) {
     window.alert("مقدار کل با مقدار درست و غلط برابر نیست ");
+    e.preventDefault();
   } else {
     let natije = ((Math.floor(3 * dorost.value) - ghalat.value) / (kol.value * 3)) * 100;
     let Doragham = natije.toFixed(2);
     adad.innerHTML = Doragham + "%";
     adad.classList.add("tran");
-    send.preventDefault();
+    e.preventDefault();
   }
 });
